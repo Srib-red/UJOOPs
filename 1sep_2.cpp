@@ -1,22 +1,23 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class xy_coordinates{
+class xy_coordinates
+{
 
-    private:
+private:
     float x;
     float y;
 
-    public:
+public:
     void set_value(float a1, float b1);
     void get_value(void);
 
-    //constructor 
-    // xy_coordinates(){ //defualt constructor
-    //     cout<<"hello world !"<<endl;
-    //     this->x = 22;
-    //     this->y = 12;
-    // }
+    // constructor
+    //  xy_coordinates(){ //defualt constructor
+    //      cout<<"hello world !"<<endl;
+    //      this->x = 22;
+    //      this->y = 12;
+    //  }
 
     xy_coordinates(float n1, float n2)
     {
@@ -31,7 +32,7 @@ class xy_coordinates{
     }
 };
 
-void xy_coordinates ::set_value(float a1,float a2)
+void xy_coordinates ::set_value(float a1, float a2)
 {
     this->x = a1;
     this->y = a2;
@@ -39,15 +40,17 @@ void xy_coordinates ::set_value(float a1,float a2)
 
 void xy_coordinates ::get_value(void)
 {
-    cout<<"x: "<<this->x<<endl<<"y: "<<this->y<<endl;
+    cout << "x: " << this->x << endl
+         << "y: " << this->y << endl;
 }
 
-int main(){
-    xy_coordinates s1(12,34), s2(67);
+int main()
+{
+    xy_coordinates s1(12, 34), s2(67);
     // s1.set_value(3,4);
     s1.get_value();
     s2.get_value();
     return 0;
 }
 
-//this == self(of python)
+// this == self(of python)
