@@ -34,7 +34,8 @@ int main()
   complex c1(3, 4), c2(4, 5), c4(0, 0);
   c1.get_details();
   // c4 = c1*c2;
-  c4 = c1 / c2;
+  // c4 = c1 / c2;
+  c4 = c1.operator/(c2);
   c4.get_details();
   return 0;
 }

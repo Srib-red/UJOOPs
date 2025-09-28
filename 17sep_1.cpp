@@ -34,12 +34,15 @@ public:
         this->arr2[0] = a;
         this->arr2[1] = b;
     }
-    void get_vector()
-    {
-        cout << "vector: " << this->arr2[0] << " " << this->arr2[1] << endl;
-    }
+    void get_vector();
+
     friend vector vector_matrices_sangam(vector *v1, matrices *m1);
 };
+
+void vector ::get_vector()
+{
+    cout << "vector: " << this->arr2[0] << " " << this->arr2[1] << endl;
+}
 
 vector vector_matrices_sangam(vector *v1, matrices *m1)
 {

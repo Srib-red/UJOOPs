@@ -7,9 +7,10 @@ private:
     string name;
     int account_num;
     float bal;
+    static float total_balance;
 
 public:
-    static float total_balance;
+    // static float total_balance;
     state_bank(string n, int a, float b)
     {
         this->name = n;
@@ -29,7 +30,7 @@ int main()
 {
     state_bank a1("Aashif", 4545, 100);
     a1.get_details();
-    cout << "Total Balance: " << state_bank ::total_balance << endl;
+    // cout << "Total Balance: " << state_bank ::total_balance << endl; --> erroe msg: "member "state_bank::total_balance" (declared at line 28) is inaccessible"
     state_bank a2("Renga", 6969, 200);
     a2.get_details();
     return 0;
