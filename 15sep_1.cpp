@@ -13,7 +13,7 @@ public:
     cout << "new complex has been created : " << this->x << " + " << this->y << "i" << endl;
   }
   //   complex operator* (const complex & second_obj){
-  complex operator/(const complex &second_obj)
+  complex operator/(const complex& second_obj)
   {
     complex c3(0, 0);
     c3.x = (this->x * second_obj.x) - (this->y * second_obj.y);

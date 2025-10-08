@@ -1,0 +1,1 @@
+a=(int)c;//explicit casting
