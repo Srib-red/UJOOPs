@@ -8,10 +8,12 @@ int main()
     double * dptr = &j;
 
     cout<<"iptr: "<<iptr<<endl;
-    //iptr = dptr; //implicit casting doesnt work pointers
+    cout<<"dptr: "<<dptr<<endl<<endl;
+    // iptr = dptr; //implicit casting doesnt work pointers  ###***error***###
+    // cout<<"iptr[(iptr = dptr]: "<<iptr<<endl<<endl;
     iptr = (int*)dptr; //double to integer
     cout<<"iptr[(int*)dptr]: "<<iptr<<endl<<endl;
-    cout<<"dptr: "<<dptr<<endl;
+    // cout<<"dptr: "<<dptr<<endl;
     dptr = (double *)iptr;
     cout<<"dptr[(double *)iptr]: "<<dptr<<endl<<endl;
     cout<<*iptr<<endl;

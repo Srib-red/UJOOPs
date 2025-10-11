@@ -11,5 +11,6 @@ int main()
     a=c;// double to int //implicit casting
     a=(int)c;//explicit casting
     cout<<"value of a: "<<a<<endl;
+    cout<<"value of c: "<<c<<endl;
     return 0;
 }

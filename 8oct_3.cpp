@@ -13,7 +13,7 @@ int main()
 {
     A * oa;
     B * ob;
-    //oa = ob; //pointers do not supports implicit casting
+    // oa = ob; //pointers do not supports implicit casting ###***error***###
     oa = (A*)ob;
     oa->a = 4;
     cout<<"value of a: "<<oa->a<<endl;

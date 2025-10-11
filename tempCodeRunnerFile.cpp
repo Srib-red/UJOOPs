@@ -1,1 +1,1 @@
-a=(int)c;//explicit casting
+s1->display();
