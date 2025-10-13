@@ -10,12 +10,12 @@ class Base{
 class Derived : public Base{
     public:
         using Base :: fun1;
-        // void fun1(){//this method overrides base class method i.e. fun1
-        //     cout<<"fun1 from class derived."<<endl;
+        // // void fun1(){//this method overrides base class method i.e. fun1
+        // //     cout<<"fun1 from class derived."<<endl;
+        // // }
+        // void fun1(){
+        //     cout<<"From derived class.\n";
         // }
-        void fun1(){
-            cout<<"From derived class.\n";
-        }
         void fun1(int a){
             cout<<"Value of a is: "<<a<<endl;
         }

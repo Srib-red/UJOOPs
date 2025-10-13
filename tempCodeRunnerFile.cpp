@@ -1,1 +1,1 @@
-s1->display();
+cout<< vect1.at(4);
