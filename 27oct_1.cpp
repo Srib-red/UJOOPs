@@ -3,6 +3,15 @@
 #include<set>
 using namespace std;
 vector<int> remove_similar(vector<int> vv){
+    vector<int> v1;
+    for (int i : vv)
+    {
+        if (i)
+        {
+            /* code */
+        }
+        
+    }
     
 }
 int main(){
@@ -22,6 +31,19 @@ int main(){
     v1.push_back(23);
     auto it1 = v1.rbegin();
     v1.insert(v1.begin()+3,3,67);
+    set<int> s;
+    for (int i : v1)
+    {
+        s.insert(i);
+    }
+    cout<<"set elements: "<<endl;
+    for (int i : s)
+    {
+       cout<<i<<endl;
+    }
+    v1.assign(s.begin(),s.end());
+    for
+    
     cout<<"#####################################################################"<<endl;
     for (int i : v1)
     {
