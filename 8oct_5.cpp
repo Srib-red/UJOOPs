@@ -9,7 +9,7 @@ class Base{
 };
 class Derived : public Base{
     public:
-        using Base :: fun1;
+        // using Base :: fun1;
         // // void fun1(){//this method overrides base class method i.e. fun1
         // //     cout<<"fun1 from class derived."<<endl;
         // // }
@@ -25,7 +25,7 @@ int main()
     Base b;
     Derived d;
     b.fun1();
-    d.fun1();
+    d.fun1();//without using Base:: fun1; -->error, with --> fun1 from base class 
     d.fun1(5);
     return 0;
 }

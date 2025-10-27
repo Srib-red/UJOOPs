@@ -25,16 +25,16 @@ int main()
     Derived* odptr = &od;
     cout<<"odptr before initial: "<<odptr<<endl;
 
-    // obptr = odptr; // UPcasting //implicit casting is allowed here //same
-    // obptr = (Base*)odptr; // same
-    // cout<<"obptr after upcasting: "<<obptr<<endl;
-    // cout<<"value of a: "<<obptr->a<<endl;
-    // // cout<<"value of b: "<<obptr->b<<endl;//--> ###error###
-    // obptr->display();
+    obptr = odptr; // UPcasting //implicit casting is allowed here //same
+    obptr = (Base*)odptr; // same
+    cout<<"obptr after upcasting: "<<obptr<<endl;
+    cout<<"value of a: "<<obptr->a<<endl;
+    // cout<<"value of b: "<<obptr->b<<endl;//--> ###error###
+    // obptr->display1();//--> ###error### ''''if we change the name of display of derived class to display1
 
     // odptr = obptr; ###error###
-    odptr = (Derived*)obptr;//explicit casting DOWNcasting
-    odptr->display();
-    cout<<"Values of a,b and c is derived class are: "<<odptr->a<<" . . "<<odptr->b<<" . . "<<odptr->c<<endl;
+    // odptr = (Derived*)obptr;//explicit casting DOWNcasting
+    // odptr->display();
+    // cout<<"Values of a,b and c is derived class are: "<<odptr->a<<" . . "<<odptr->b<<" . . "<<odptr->c<<endl;
     return 0;
 }
