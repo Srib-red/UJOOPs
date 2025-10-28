@@ -1,2 +1,1 @@
-int a = 4;
-        vo
+CR1.getter();

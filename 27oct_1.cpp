@@ -41,8 +41,11 @@ int main(){
     {
        cout<<i<<endl;
     }
+    cout<<"bfiuds: "<<bool(*s.find(23))<<endl;
     v1.assign(s.begin(),s.end());
-    for
+    for (int i: v1){
+        cout<<i<<endl;
+    }
     
     cout<<"#####################################################################"<<endl;
     for (int i : v1)

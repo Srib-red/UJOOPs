@@ -16,13 +16,17 @@ namespace mything{
             }
     };
 };
-
+using namespace mything;
 int main()
 {
-    mything::uv = 10;
-    cout<<"value of uv is: "<<mything::uv<<endl;
-    mything::great();
-    mything::simple s(6);
+    // mything::uv = 10;
+    uv = 10;
+    // cout<<"value of uv is: "<<mything::uv<<endl;
+    cout<<"value of uv is: "<<uv<<endl;
+    // mything::great();
+    // mything::simple s(6);
+    great();
+    simple s(6);
     s.get_value();
     return 0;
 }

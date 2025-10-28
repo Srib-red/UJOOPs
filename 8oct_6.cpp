@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-class University
+class BASE
 {
     // string name;
     // int ID;
@@ -8,58 +8,58 @@ public:
     virtual void display()
     {
         // cout<<"Name: "<<this->name<<" and Id: "<<this->Id<<endl;
-        cout << "Welcoem from class University(Bass)" << endl;
+        cout << "Welcoem from class BASE(Bass)" << endl;
     }
 };
 
-class student : public University
+class Derived : public BASE
 {
 public:
     void display()
     {
-        cout << "Welcome from class student(Derived)" << endl;
+        cout << "Welcome from class Derived(Derived)" << endl;
     }
 };
 
 int main()
 {
-    University *university_ptr;
-    University university_obj;
-    university_ptr = &university_obj;
+    BASE *BASE_ptr;
+    BASE BASE_obj;
+    BASE_ptr = &BASE_obj;
 
-    university_ptr->display();
+    BASE_ptr->display();
 // ##########################################################################
 
-    student *student_ptr;
-    student student_obj;
-    student_ptr = &student_obj;
+    Derived *Derived_ptr;
+    Derived Derived_obj;
+    Derived_ptr = &Derived_obj;
 
-    student_ptr->display();
+    Derived_ptr->display();
     cout<<endl;
 // ##########################################################################
 
-    student_ptr = (student *)university_ptr; /// student_ptr(derived) -> university_ptr(Base)
-    student_ptr->display();
+    Derived_ptr = (Derived *)BASE_ptr; /// Derived_ptr(derived) -> BASE_ptr(Base)
+    Derived_ptr->display();
 
 // ##########################################################################  
     // if we use keyword virtual , it gonna call, where pointer is pointing
-    //  Welcoem from class University(Bass)
-    //  Welcome from class student(Derived)
-    //  Welcoem from class University(Bass)
+    //  Welcoem from class BASE(Bass)
+    //  Welcome from class Derived(Derived)
+    //  Welcoem from class BASE(Bass)
 
     // No Virtual
-    //  Welcoem from class University(Bass)
-    //  Welcome from class student(Derived)
-    //  Welcome from class student(Derived)
+    //  Welcoem from class BASE(Bass)
+    //  Welcome from class Derived(Derived)
+    //  Welcome from class Derived(Derived)
 // ##########################################################################
 
 
-    // university_ptr = student_ptr;//upcasting //dynamic binding
-    // university_ptr->display();
+    // BASE_ptr = Derived_ptr;//upcasting //dynamic binding
+    // BASE_ptr->display();
 
 // ##########################################################################
-    // university_obj.display(); //static binding
-    // student_obj.display(); //static binding
+    // BASE_obj.display(); //static binding
+    // Derived_obj.display(); //static binding
 
     return 0;
 }
