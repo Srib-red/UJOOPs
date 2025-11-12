@@ -1,52 +1,61 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Base{
-    public:
-    virtual void print(){
-        cout<<"Hi, from base class;;;;;;"<<endl;
+class Base
+{
+public:
+    virtual void print()
+    {
+        cout << "Hi, from base class;;;;;;" << endl;
     }
-    // virtual ~Base(){
-    //     cout<<"Destructor, from base;;;;;;"<<endl;
+    virtual void get_derived()
+    {
+        cout << "this is from base;;;;;;;" << endl;
+    }
+    // virtual ~Base()
+    // {
+    //     cout << "Destructor, from base;;;;;;" << endl;
     // }
-    virtual void get_derived(){
-        cout<<"this is from base;;;;;;;"<<endl;
-    }
 };
-class Derived : public Base{
-    public:
-    void print(){
-        cout<<"Hi, from derived class;;;;;;"<<endl;
+class Derived : public Base
+{
+public:
+    void print()
+    {
+        cout << "Hi, from derived class;;;;;;" << endl;
+    }
+    virtual void get_derived()
+    {
+        cout << "this is from derived;;;;;;;" << endl;
     }
     // virtual ~Derived(){
     //     cout<<"Destructor, from derived;;;;;;"<<endl;
     // }
-    virtual void get_derived(){
-        cout<<"this is from derived;;;;;;;"<<endl;
-    }
 };
-class DerivedofDerived : public Derived{
-    public:
-    void get_derived(){
-        cout<<"this is from derived of derived;;;;;;;"<<endl;
+class DerivedofDerived : public Derived
+{
+public:
+    void get_derived()
+    {
+        cout << "this is from derived of derived;;;;;;;" << endl;
     }
 };
 int main()
 {
     Base b;
-    Base* bptr = &b;
+    Base *bptr = &b;
     Derived d;
-    Derived* dptr = &d;
+    Derived *dptr = &d;
     DerivedofDerived d2;
     DerivedofDerived *d2ptr = &d2;
 
-    bptr = (Base*)dptr;
-    dptr = (Derived*)d2ptr;
+    bptr = (Base *)dptr;
+    dptr = (Derived *)d2ptr;
 
     bptr->get_derived();
     dptr->get_derived();
     d2ptr->get_derived();
 
-// ##########################################################################
+    // ##########################################################################
 
     // b.print();// base :: print //static binding
     // d.print();// derived :: print //static binding
@@ -59,6 +68,6 @@ int main()
     // dptr = (Derived*)bptr;
     // dptr->print();
 
-// ##########################################################################
+    // ##########################################################################
     return 0;
 }

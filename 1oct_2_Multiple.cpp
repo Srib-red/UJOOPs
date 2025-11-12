@@ -8,6 +8,7 @@ class Student
 public:
     Student(int roll, string nam)
     {
+        cout<<"STU CONS.\n";
         this->roll_no = roll;
         this->name = nam;
     }
@@ -24,6 +25,7 @@ class math_course
 public:
     math_course(string cour, int ass)
     {
+        cout<<"MATH CONS.\n";
         this->course = cour;
         this->no_assign = ass;
     }
@@ -39,10 +41,11 @@ class registry : public Student, public math_course
 public:
     registry(bool k, int assign, string cour, string name, int roll_no) : math_course(cour, assign), Student(roll_no, name)
     {
-        if (k == true)
-            cout << "Verified!!!.\n";
-        else
-            cout << "not Verified!!!.\n";
+        cout<<"REG CONS.\n";
+        // if (k == true)
+        //     cout << "Verified!!!.\n";
+        // else
+        //     cout << "not Verified!!!.\n";
     }
 };
 int main()
