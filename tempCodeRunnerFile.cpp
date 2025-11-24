@@ -1,1 +1,1 @@
-CR1.getter();
+bptr = (B*)aptr;
